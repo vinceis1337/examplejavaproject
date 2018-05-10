@@ -19,11 +19,13 @@ public class Main {
 
     public static void printStatement(Car car, int miles, int lastYearDriven) {
         int carYears = lastYearDriven - car.yearMade;
+        double carMilesPerYear = car.avgMiles(carYears, miles);
         double carDepreciatedValue = car.valueAfter(carYears, miles);
         double carCostOfGas = car.costOfGas(miles);
         double totalCarCost = car.value - carDepreciatedValue + carCostOfGas;
         System.out.println(car.owner + "'s car is " + String.valueOf(carYears) + " years old.");
         System.out.println("They have driven the car for " + String.valueOf(carYears) + " years and " + String.valueOf(miles) + " miles.");
+        System.out.println("The car has been driven an average of " + String.valueOf(carMilesPerYear) + " miles per year.");
         System.out.println("The value of the car is now " + String.valueOf(carDepreciatedValue) + ".");
         System.out.println("The cost of gasoline/electricity is " + String.valueOf(carCostOfGas) + ".");
         System.out.println("The total cost of owning this vehicle (without insurance included) is " + String.valueOf(totalCarCost) + ".");
