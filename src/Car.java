@@ -6,7 +6,6 @@ public class Car {
     public double depreciationTimeFactor;
     public double depreciationMilesFactor;
     public double milesPerGallon;
-    public double lifetimeGasUsed;
 
     public Car(String model, String owner) {
         this.model = model;
@@ -49,7 +48,7 @@ public class Car {
         return overallGasCost;
     }
 
-    public double lifetimeGasUsed(double milesDriven, double milesPerGallon) {
+    public double lifetimeGasUsed(double milesDriven) {
         //how many int miles drive / mile per gallon return
         double lifetimeGasUsed = milesDriven / milesPerGallon;
         return lifetimeGasUsed;

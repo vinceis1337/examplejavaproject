@@ -22,7 +22,7 @@ public class Main {
         double carDepreciatedValue = car.valueAfter(carYears, miles);
         double carCostOfGas = car.costOfGas(miles);
         double totalCarCost = car.value - carDepreciatedValue + carCostOfGas;
-        double gasUsed = car.lifetimeGasUsed;
+        double gasUsed = car.lifetimeGasUsed(miles);
         System.out.println(car.owner + "'s car is " + String.valueOf(carYears) + " years old.");
         System.out.println("They have driven the car for " + String.valueOf(carYears) + " years and " + String.valueOf(miles) + " miles.");
         System.out.println("The value of the car is now " + String.valueOf(carDepreciatedValue) + ".");
