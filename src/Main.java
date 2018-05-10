@@ -41,14 +41,3 @@ public class Main {
     The total cost of owning this vehicle (without insurance included) is X.
  */
 
-public class CashValue {
-    double value;
-
-    public CashValue(double value) {
-        this.value = value;
-    }
-
-    public String formatValue() {
-        String.valueOf(Math.round(value * 100) / 100);
-    }
-}
