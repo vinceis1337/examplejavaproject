@@ -47,4 +47,10 @@ public class Car {
         double overallGasCost = milesDriven/milesPerGallon*2;
         return overallGasCost;
     }
+
+    public double avgMiles(int years, double milesDriven) {
+        //average miles per year = milesDriven / years
+        double milesPerYear = milesDriven / years;
+        return milesPerYear;
+    }
 }
