@@ -53,4 +53,10 @@ public class Car {
         double lifetimeGasUsed = milesDriven / milesPerGallon;
         return lifetimeGasUsed;
     }
+
+    public double avgMiles(int years, double milesDriven) {
+        //average miles per year = milesDriven / years
+        double milesPerYear = milesDriven / years;
+        return milesPerYear;
+    }
 }
