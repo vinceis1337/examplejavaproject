@@ -7,7 +7,7 @@ public class Main {
         Car joeCar = new Car("Camry", "Joe Chen"); // Joe drives his car until 2040 and puts 400000 miles on his car.
         Car markCar = new Car("Model S", "Mark Warbles"); // Mark drives his car until 2021 and puts 20000 miles on his car.
 
-        Car[] arrayOfCars = new Car[] { lanceCar, joeCar, markCar };
+        Car[] arrayOfCars = new Car[]{lanceCar, joeCar, markCar};
 
 
         printStatement(lanceCar, 100000, 2025);
@@ -23,16 +23,17 @@ public class Main {
         double carDepreciatedValue = car.valueAfter(carYears, miles);
         double carCostOfGas = car.costOfGas(miles);
         double totalCarCost = car.value - carDepreciatedValue + carCostOfGas;
+        double gasUsed = car.lifetimeGasUsed(miles);
         System.out.println(car.owner + "'s car is " + String.valueOf(carYears) + " years old.");
         System.out.println("They have driven the car for " + String.valueOf(carYears) + " years and " + String.valueOf(miles) + " miles.");
         System.out.println("The car has been driven an average of " + String.valueOf(carMilesPerYear) + " miles per year.");
         System.out.println("The value of the car is now " + String.valueOf(carDepreciatedValue) + ".");
         System.out.println("The cost of gasoline/electricity is " + String.valueOf(carCostOfGas) + ".");
         System.out.println("The total cost of owning this vehicle (without insurance included) is " + String.valueOf(totalCarCost) + ".");
+        System.out.println("The car has used " + String.valueOf(gasUsed) + " gallons of gas.");
         System.out.println();
+
     }
-
-
 }
 
 /*

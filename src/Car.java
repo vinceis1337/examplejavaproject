@@ -34,18 +34,24 @@ public class Car {
 
     public double valueAfter(int years, double milesDriven) {
         //value * depreciationMilesFactor * milesDriven
-        double depreciatedMilesValue = value*depreciationMilesFactor*milesDriven;
+        double depreciatedMilesValue = value * depreciationMilesFactor * milesDriven;
         //value x depreciationTimeFactor * years
-        double depreciatedTimeValue = value*depreciationTimeFactor*years;
+        double depreciatedTimeValue = value * depreciationTimeFactor * years;
         //subtract both top from value initial.
         double depreciatedValue = value - depreciatedMilesValue - depreciatedTimeValue;
         return depreciatedValue;
     }
 
-    public double costOfGas(float milesDriven) {
+    public double costOfGas(double milesDriven) {
         //costOfGas = milesDriven / milesPerGallon * gasPrice
-        double overallGasCost = milesDriven/milesPerGallon*2;
+        double overallGasCost = milesDriven / milesPerGallon * 2;
         return overallGasCost;
+    }
+
+    public double lifetimeGasUsed(double milesDriven) {
+        //how many int miles drive / mile per gallon return
+        double lifetimeGasUsed = milesDriven / milesPerGallon;
+        return lifetimeGasUsed;
     }
 
     public double avgMiles(int years, double milesDriven) {
